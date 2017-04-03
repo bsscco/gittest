@@ -3,6 +3,8 @@ mkdir gittest
 cd gittest 
 git init
 
+git remote add remote_alias https://github.com/bsscco/gittest.git
+
 git clone -o remote_alias -b remote_branch_name https://github.com/bsscco/gittest.git
 remote_alias : 원격저장소를 가리킬 별명
 remote_branch_name : 원격저장소에 있는 브랜치 중 하나의 이름
