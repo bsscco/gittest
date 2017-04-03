@@ -18,6 +18,11 @@ git push remote_alias remote_branch_name
 git branch -d local_branch_name
 git diff branch_name
 git tag
+git tag -d tag_name
+
+git tag -n
+태그 주석 포함 
+
 git tag tag_name
 
 모든 로컬 브런치는 커밋하기 전 시점(working~stage)까지는 수정된 파일들을 공유한다.
@@ -37,3 +42,28 @@ unstaging 한다.
 
 git add -i
 대화식 추가. 추가할 파일을 선택하여 한 번에 추가할 수 있다.
+
+git log --graph --oneline --decorate
+decorate는 태그 정보를 포함하여 보여준다.
+
+git merge local_branch_name 
+현재 브랜치를 local_branch_name과 머지해서 현재 브랜치가 나아간다.
+또는 현재 브랜치가 local_branch_name쪽으로 fast-forward merge한다.
+
+git commit --amend
+가장 최근 커밋의 내용을 변경
+
+git revert HEAD
+HEAD 바로 이전 커밋의 변경사항으로 되돌리되, 되돌린 사항을 새로운 커밋을 만든다.
+
+git revert HEAD~~
+HEAD 바로 이전이전 커밋의 변경사항으로 되돌리되, 되돌린 사항을 새로운 커밋을 만든다.
+
+git reset --hard HEAD~~
+HEAD 바로 이전이전 커밋의 변경사항으로 되돌린다. 이때 이후 시점의 커밋들은 삭제된다.
+
+git reset --hard ORIG_HEAD
+실수로 reset한 걸 반대로 되돌린다.
+
+git cherry-pick commit_id
+commit 로그를 보고 커밋 id를 찾아 체리픽하면 해당 커밋의 내용만 가져올 수 있다.
