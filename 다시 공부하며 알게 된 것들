@@ -33,3 +33,5 @@ stage 또는 working에서 강제로 삭제한다.
 git rm -cached 1234.txt
 unstaging 한다.
 
+git add -i
+대화식 추가. 추가할 파일을 선택하여 한 번에 추가할 수 있다.
