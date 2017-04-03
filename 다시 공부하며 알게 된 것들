@@ -1,0 +1,15 @@
+명령어 모음
+mkdir gittest
+cd gittest 
+git init
+
+git clone -o remote_alias -b remote_branch_name https://github.com/bsscco/gittest.git
+remote_alias : 원격저장소를 가리킬 별명
+remote_branch_name : 원격저장소에 있는 브랜치 중 하나의 이름
+
+git remote -v
+git add 파일경로
+git add *
+git commit -m 'message'
+git push remote_alias
+
