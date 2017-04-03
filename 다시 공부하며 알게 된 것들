@@ -11,5 +11,25 @@ git remote -v
 git add 파일경로
 git add *
 git commit -m 'message'
-git push remote_alias
+git push remote_alias remote_branch_name
+
+git branch -d local_branch_name
+git diff branch_name
+git tag
+git tag tag_name
+
+모든 로컬 브런치는 커밋하기 전 시점(working~stage)까지는 수정된 파일들을 공유한다.
+커밋 이후 시점(HEAD)부터는 공유하지 않는다.
+
+git reset remote_alias/remote_branch_name
+stage, HEAD에 있는 파일들을 working으로 돌려보낸다. working에 있던 파일들은 영향을 받지 않는다.
+
+git reset --hard remote_alias/remote_branch_name
+stage, HEAD에 있는 파일들을 강제로 삭제한다. working에 있던 파일들은 영향을 받지 않는다.
+
+git rm -f 1234.txt
+stage 또는 working에서 강제로 삭제한다.
+
+git rm -cached 1234.txt
+unstaging 한다.
 
